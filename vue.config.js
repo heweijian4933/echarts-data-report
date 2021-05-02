@@ -7,11 +7,11 @@ module.exports = {
   lintOnSave: true, // 是否在开发环境下每次保存代码时都启用 eslint 验证
   chainWebpack(config) {
     // 设置 svg-sprite-loader
-    config.module.rule("svg").exclude.add(resolve("src/icons")).end()
+    config.module.rule("svg").exclude.add(resolve("src/assets/icons")).end()
     config.module
       .rule('icons')
       .test(/\.svg$/)
-      .include.add(resolve('src/icons'))
+      .include.add(resolve('src/assets/icons'))
       .end()
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
@@ -19,6 +19,15 @@ module.exports = {
         symbolId: 'icon-[name]'
       })
       .end()
+  },
+  css: {
+    loaderOptions: {
+      scss: {
+        additionalData: `
+          @import "@/assets/style/index.scss";
+          `
+      }
+    }
   },
   devServer: {
     proxy: {

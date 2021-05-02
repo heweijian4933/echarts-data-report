@@ -1,0 +1,25 @@
+//
+$side-bar-width: 200px;
+$hide-side-bar-width: 64px;
+
+$transition-duration: 0.5s;
+
+$index-top: 999;
+$index-md: 200;
+$index-bottom: 10;
+
+$screen-mn: 375px;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 976px;
+$screen-xl: 1440px;
+
+
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+// JS 与 scss 共享变量，在 scss 中通过 :export 进行导出，在 js 中可通过 ESM 进行导入
+:export {
+    side-bar-width: $side-bar-width;
+    hide-side-bar-width: $hide-side-bar-width;
+    transition-duration: $transition-duration;
+    index-md: $index-md;
+}

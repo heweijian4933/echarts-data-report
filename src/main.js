@@ -6,7 +6,7 @@ import store from "./store"
 import * as echarts from 'echarts'
 
 import installElementPlus from './plugins/element'
-import installIcons from '@/icons'
+import installIcons from '@/assets/icons'
 
 console.log("process.env=>", process.env)
 
