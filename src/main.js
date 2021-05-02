@@ -13,6 +13,7 @@ console.log("process.env=>", process.env)
 
 const app = createApp(App)
 app.config.globalProperties.$echarts = echarts
+app.config.globalProperties.$test = "test"
 
 app
     .use(installElementPlus)

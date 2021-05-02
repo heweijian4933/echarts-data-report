@@ -5,17 +5,23 @@
         <div class="compare">
           <span>日同比: </span>
           <span class="font-bold">7.33%</span>
+          <div class="flex justify-center items-center">
+            <svg-icon icon="arrow-up" />
+          </div>
         </div>
         <div class="compare">
           <span>月同比: </span>
           <span class="font-bold">6.33%</span>
+          <div class="flex justify-center items-center">
+            <svg-icon icon="arrow-down" />
+          </div>
         </div>
       </div>
     </template>
     <template #total>
       <div class="amount">
         <span> 昨日销售总额: </span>
-        <span>$ 3,000,000.00</span>
+        <span class="font-bold">$ 3,000,000.00</span>
       </div>
     </template>
   </common-card>
@@ -39,13 +45,14 @@ const chartData = reactive({
     flex-direction: column;
     justify-content: center;
     .compare {
+      display: flex;
       font-size: 12px;
-      background-color: #yellow;
       margin-top: 3px;
       color: #666;
     }
   }
   .amount {
+    // font-size: 15px;
   }
 }
 </style>

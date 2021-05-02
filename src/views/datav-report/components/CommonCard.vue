@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+// import { defineProps } from 'vue'
 const props = defineProps({
   title: { type: String, default: '销售' },
   value: { type: String, default: '32,039.00' }
@@ -23,7 +23,7 @@ const props = defineProps({
 <style lang="scss">
 .common-card {
   .title {
-    font-size: 12px;
+    font-size: 15px;
     color: #999;
   }
   .value {

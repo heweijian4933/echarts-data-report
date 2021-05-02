@@ -23,6 +23,21 @@ const props = defineProps({
   className: {
     type: String,
     default: ''
+  },
+  width: {
+    // <style> 动态变量注入
+    type: String,
+    default: '1em'
+  },
+  height: {
+    // <style> 动态变量注入
+    type: String,
+    default: '1em'
+  },
+  color: {
+    // <style> 动态变量注入
+    type: String,
+    default: '#000000'
   }
 })
 
@@ -45,15 +60,15 @@ const iconName = computed(() => `#icon-${props.icon}`)
 
 <style scoped>
 .svg-icon {
-  width: 1em;
-  height: 1em;
+  width: v-bind(width);
+  height: v-bind(height);
   vertical-align: -0.15em;
-  fill: currentColor;
+  fill: v-bind(color);
   overflow: hidden;
 }
 
 .svg-external-icon {
-  background-color: currentColor;
+  background-color: v-bind(color);
   mask-size: cover !important;
   display: inline-block;
 }
