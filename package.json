@@ -5,17 +5,23 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "prepare": "husky install"
+    "lint": "vue-cli-service lint \"src/**/*.{js,vue}\"",
+    "prettier": "npx prettier --write \"**/**/*.{vue,css,less,json}\"",
+    "all": "npm run prettier && npm run fix",
+    "prepare": "husky install",
+    "commit": "git cz",
+    "test": "jest"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "husky": "7.0.1",
+    "echarts": "^5.3.1",
+    "element-plus": "^2.1.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
+    "husky": "7.0.1",
+    "core-js": "^3.6.5",
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
     "@vue/cli-plugin-babel": "~4.5.15",
@@ -33,8 +39,10 @@
     "eslint-plugin-vue": "^7.0.0",
     "jest": "^27.5.1",
     "prettier": "^2.2.1",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2"
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.4",
+    "svg-sprite-loader": "^6.0.11",
+    "unplugin-vue-components": "^0.18.4"
   },
   "config": {
     "commitizen": {

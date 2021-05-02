@@ -4,4 +4,6 @@ README.md
 commitlint.config.js
 package.json
 babel.config.js
+vue.config.js
+jest.config.js
 yarn.lock
